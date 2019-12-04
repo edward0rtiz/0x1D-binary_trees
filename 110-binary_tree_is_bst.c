@@ -16,7 +16,7 @@ int check_sub_tree_Left(const binary_tree_t *node, int max)
 	}
 	else
 	{
-		if (node->n > max)
+		if (node->n >= max)
 			return (0);
 		left = check_sub_tree_Left(node->left, max);
 		right = check_sub_tree_Left(node->right, max);
@@ -42,7 +42,7 @@ int check_sub_tree_Right(const binary_tree_t *node, int min)
 	}
 	else
 	{
-		if (node->n < min)
+		if (node->n =< min)
 			return (0);
 		left = check_sub_tree_Right(node->left, min);
 		right = check_sub_tree_Right(node->right, min);
