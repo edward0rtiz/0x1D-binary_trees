@@ -42,7 +42,7 @@ int check_sub_tree_Right(const binary_tree_t *node, int min)
 	}
 	else
 	{
-		if (node->n =< min)
+		if (node->n <= min)
 			return (0);
 		left = check_sub_tree_Right(node->left, min);
 		right = check_sub_tree_Right(node->right, min);
