@@ -36,8 +36,8 @@ int binary_tree_balance(const binary_tree_t *tree)
 
 	if (tree)
 	{
-		left = binary_tree_height(tree->left);
-		right = binary_tree_height(tree->right);
+		left = ((int)binary_tree_height(tree->left));
+		right = ((int)binary_tree_height(tree->right));
 		total = left - right;
 	}
 	return (total);
@@ -129,8 +129,8 @@ int binary_tree_is_heap(const binary_tree_t *tree)
 	}
 	if (bval == 1)
 	{
-		return (binary_tree_is_perfect(tree->left)
-			&& binary_tree_is_heap(tree->right));
+		return (binary_tree_is_perfect(tree->right)
+			&& binary_tree_is_heap(tree->left));
 	}
 	else
 	{
